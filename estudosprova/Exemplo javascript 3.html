@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificação de Campo Obrigatório</title>
+    <title>formulario</title>
 </head>
 <body>
-
-    <form id="meuFormulario">
-        <label for="campoObrigatorio">Campo Obrigatório:</label>
-        <input type="text" id="campoObrigatorio" name="campoObrigatorio" required>
-
-        <button type="button" 
-		onclick=
-		"if(document.getElementById('campoObrigatorio').checkValidity())
-			{alert('Dados salvos com sucesso!');}
-		else{alert('Por favor, preencha corretamente os campos obrigatórios.');}">Verificar</button>
+    <form id="obrg">
+        <fieldset>
+            <label>
+                Nome:
+                <input type="text" required style="margin-bottom:10px;">
+                <br>
+                Email:
+                <input type="email" required>
+            </label>
+            <fieldset style="margin-top: 12px;">
+                <form>
+                    <input type="radio" name="opc" value="elogio" required> Elogio
+                    <br>
+                    <input type="radio" name="opc" value="reclamacao" required > Reclamação
+                <form>
+            </fieldset>
+            <br>
+            Deixe a sua mensagem abaixo
+            <br>
+            <textarea cols="30" rows="5"></textarea>
+            <br>
+            <button type="button" 
+            onclick=
+            "if(document.getElementById('obrg').checkValidity())
+                {alert('Formulario enviado com sucesso!');}
+            else{alert('Por favor, preencha corretamente os campos obrigatórios.');}">Enviar</button>
+        </fieldset>
     </form>
-
 </body>
 </html>
