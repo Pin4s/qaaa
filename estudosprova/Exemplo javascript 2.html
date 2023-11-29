@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Exemplo JavaScript</title>
+	</head>
+	
+	<body>
+		<p id="exemplo">Conteúdo HTML sem graça</p>
+
+		<script>
+		setTimeout(function() {
+			console.log("Execução após 30 segundos");
+			document.getElementById("exemplo").innerHTML = "Minha primeira modificação em Javascript";
+			document.getElementById("exemplo").style.color = "orange";
+			document.getElementById("exemplo").style.backgroundColor = "green";
+		}, 5000);
+		</script>
+	</body>
+</html>
